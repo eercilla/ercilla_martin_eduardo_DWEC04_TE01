@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda Cultural</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main>
+
+    <h1 class="text-titulo">Agenda Cultural</h1>
+    <div class="botones-cantidad">
+      <p>Elementos por página: </p>
+      <button id="pocos">Pocos</button>
+      <button id="medio">Medio</button>
+      <button id="muchos">Muchos</button>
+
+    </div>
+
+    <div class="container">
+
+
+      <div id="eventos" class="eventos-bloque"></div>
+      <div class="bloque-carga">
+
+          <img class="cargando" src="./img/carga.gif">
+
+      </div>
+    </div>
+
+    <div>
+      <div class="botones">
+          <button id="anterior">Anterior</button>
+          <button id="siguiente">Siguiente</button>
+
+      </div>
+    
+      <br><hr>
+      <div class="selector">
+        <label for="startYear">Año de Inicio:</label>
+        <input type="number" id="startYear" value="2019">
+        <label for="endYear">Año de Fin:</label>
+        <input type="number" id="endYear" value="2024">
+        
+      </div>
+      <button id="actualizarChart">Mostrar Gráfico</button>
+    </div>
+
+    <div id="chartContainer"></div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="https://cdn.canvasjs.com/jquery.canvasjs.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/models/eventoModelo.js"></script>
+  </main>
+</body>
+</html>

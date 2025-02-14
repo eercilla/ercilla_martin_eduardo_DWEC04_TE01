@@ -1,0 +1,256 @@
+/* Formato body */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  
+   /* Bloque principal de index.html */
+  .container {
+    margin: 0 auto;
+    padding: 0.7rem;
+    display: flex;
+    
+  }
+
+  /* Bloque principal de evento.html */
+  .container-evento {
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+   /* Texto con el título de las páginas */
+  .text-titulo {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+    font-size: 4rem;
+    color: #333;
+  }
+  
+   /* Bloque de eventos */
+  .eventos-bloque {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+   /* Formato y comportamiento de cada evento */
+  .evento {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    width: 13rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .evento-imagen {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+  
+  .evento h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  .evento p {
+    color: #6c757d;
+    margin: 5px 0;
+  }
+
+  .evento:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
+  }
+
+  /* Bloque donde irán las zonas de derecha e izquierda de evento.html */
+  #detalle-evento{
+    display:flex;
+    flex-direction: row;
+  }
+
+  /* Imágenes dentro del bloque anterior */
+  #detalle-evento img[class="cargando"]{
+    width: 22%;
+    margin: auto;
+  }
+
+  /* Formato bloque izquierdo evento.html */
+  .izq{
+    min-width: 47%;
+    padding-right: 1rem;
+    text-align: center;
+    background: beige;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
+    
+  }
+
+  /* Formato bloque derecho evento.html */
+  .der{
+    min-width: 47%;
+    background-color: antiquewhite;
+    padding-left: 1rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
+  }
+
+  .der p, .der a{
+    padding-left: 1rem;
+  }
+
+   /* Texto que aparece por defecto en las "Descripciones" recibidas */
+  .lista{
+    list-style: none;
+  }
+
+   /* Bloque de gif "Cargando" */
+  .bloque-carga{
+    margin:auto;
+  }
+  .cargando{
+    width: 50%;
+    margin-left: 25%;
+  }
+  
+   /* Bloque para botones "Siguiente" y "Anterior" */
+  .botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 0.5rem;
+    
+  }
+
+  #anterior{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
+  }
+
+  #siguiente{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
+  }
+
+   /* Bloque del gráfico */
+  #chartContainer{
+    height: 350px;
+    width: 85%;
+    margin: auto;
+    border: 0.1rem solid gray;
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    background-color: #dee2e6;
+    background-image: url('../img/calendar.jpg');
+    background-size: contain; 
+    background-position: center;
+  }
+
+  /* Bloque para elegir qué años se quieren en el gráfico */
+  .selector{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin-left: 3rem;
+    margin-top: 3rem;
+  }
+
+ /* Texto con los años */
+  label {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
+  /* Botón "Mostrar Gráfico" */
+  #actualizarChart{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
+    margin-left: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Comportamiento genérico de los botones al pasar por encima */
+  button:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
+  }
+
+  /* Botón "Volver" en evento.html */
+  #volver{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
+    margin: 2rem;
+    margin-top: -1rem;
+  }
+
+  /* Formato botones de cantidad de eventos por página */
+  #pocos, #medio, #muchos{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
+
+  }
+
+  /* Bloque para introducir la cantidad de eventos por página */
+  .botones-cantidad{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 1rem;
+    padding-right: 1rem;
+}
+
+  /* Título lado derecho evento.html */
+  .titulo-evento{
+    text-align: center;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+    padding-bottom: 1rem;
+  }
