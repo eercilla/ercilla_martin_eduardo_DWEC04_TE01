@@ -1,0 +1,727 @@
+{
+	"info": {
+		"_postman_id": "6cfb1b44-41e8-4c19-b1ff-6ba0b048019c",
+		"name": "EV04",
+		"description": "En este archivo de ejemplo encontrarás las consultas HTTP básicas necesarias para completar la Tarea Evaluativa 2 de la Unidad Didáctica 3 de DWES. El ejemplo está basado en una aplicación de una **base de datos sobre videojuegos**, en la que podrás realizar operaciones CRUD sobre los juegos, compañías o sistemas de la BBDD.\n\n🔍 **¿Qué puedes hacer?**  \nCon esta colección, podrás ejecutar las operaciones básicas de un sistema REST para gestionar juegos/compañías/sistemas en el sistema. Entre las operaciones disponibles, encontrarás:\n\n1. **Recuperar la información de todos/as los/as juegos/compañías/sistemas**: Verás la lista completa de los elementos en el sistema.\n    \n2. **Consultar un/a juego/compañía/sistema** **específico por su ID**: Obtendrás los detalles del elemento concreto.\n    \n3. **Insertar un/a nuevo juego/compañía/sistema**s: Podrás añadir una nuevo elemento.\n    \n4. **Modificar un/a juego/compañía/sistemaexistente**: Actualiza el contenido o título de un elemento.\n    \n5. **Eliminar un/a juego/compañía/sistema**: Elimina un elemento de forma definitiva.\n    \n\n🌟 **Estructura del Ejemplo**  \nCada operación de esta plantilla cuenta con instrucciones detalladas y ejemplos de cómo enviar y recibir los datos en formato JSON. Solo necesitas hacer clic en **Send** en cada solicitud para ejecutarla y ver los resultados en tiempo real.\n\n💡 **Consejo**: Usa el archivo para familiarizarte con las consultas que deberás implementar y personalizar en tu propio servicio en la tarea evaluativa. Cada solicitud incluye una descripción paso a paso para ayudarte a entender cómo funcionan las operaciones CRUD en una API RESTful.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39852951"
+	},
+	"item": [
+		{
+			"name": "1.1 - Get todos los juegos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/EV04/public/juego/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EV04",
+						"public",
+						"juego",
+						"get"
+					]
+				},
+				"description": "Esta solicitud GET obtiene una lista de todos juegos disponibles en el sistema.\n\n**Caso de uso:** Al pulsar enviar debería devolver la información de todos los juegos disponibles"
+			},
+			"response": []
+		},
+		{
+			"name": "1.2 - Get todas las companias",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/EV04/public/compania/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EV04",
+						"public",
+						"compania",
+						"get"
+					]
+				},
+				"description": "Esta solicitud GET obtiene una lista de todos las companias disponibles en el sistema.\n\n**Caso de uso:** Al pulsar enviar debería devolver la información de todos las companias disponibles"
+			},
+			"response": []
+		},
+		{
+			"name": "1.3 - Get todos los sistemas",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/EV04/public/sistema/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EV04",
+						"public",
+						"sistema",
+						"get"
+					]
+				},
+				"description": "Esta solicitud GET obtiene una lista de todos las videoconsolas disponibles en el sistema.\n\n**Caso de uso:** Al pulsar enviar debería devolver la información de todos las videoconsolas disponibles"
+			},
+			"response": []
+		},
+		{
+			"name": "2.1 - Get juego por ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/EV04/public/juego/get/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EV04",
+						"public",
+						"juego",
+						"get",
+						"4"
+					]
+				},
+				"description": "Esta solicitud GET obtendría un juego específico basado en su ID.\n\n**Caso de uso:** Si se cambia el valor de `1` en la URL al ID del post que quieres consultar y debería devolver los detalles de ese juego concreto."
+			},
+			"response": []
+		},
+		{
+			"name": "2.2 - Get compania por ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/EV04/public/compania/get/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EV04",
+						"public",
+						"compania",
+						"get",
+						"2"
+					]
+				},
+				"description": "Esta solicitud GET obtendría una compania específica basada en su ID.\n\n**Caso de uso:** Si se cambia el valor de `1` en la URL al ID del post que quieres consultar y debería devolver los detalles de esa consola concreto."
+			},
+			"response": []
+		},
+		{
+			"name": "2.3 - Get sistema por ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/EV04/public/sistema/get/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EV04",
+						"public",
+						"sistema",
+						"get",
+						"7"
+					]
+				},
+				"description": "Esta solicitud GET obtendría un sistema específico basado en su ID.\n\n**Caso de uso:** Si se cambia el valor de `1` en la URL al ID del post que quieres consultar y debería devolver los detalles de ese sistema concreto."
+			},
+			"response": []
+		},
+		{
+			"name": "3.1 - Post juego",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"titulo\": \"The Witcher 3: Wild Hunt\",\n  \"idcompania\": 2,\n  \"sistema\": \"PC\",\n  \"genero\": \"RPG\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/EV04/public/juego/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EV04",
+						"public",
+						"juego",
+						"create"
+					]
+				},
+				"description": "Esta solicitud POST crearía un nuevo juego en el sistema.\n\n**Caso de uso:** En este caso, en el cuerpo de la solicitud se recibiría un JSON con los campos que se quiera y se guardaría un nuevo juego"
+			},
+			"response": []
+		},
+		{
+			"name": "3.2 - Post compania",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"BioWare\",\n  \"fundacion\": \"1995-02-01\",\n  \"pais\": \"Canada\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/EV04/public/compania/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EV04",
+						"public",
+						"compania",
+						"create"
+					]
+				},
+				"description": "Esta solicitud POST crearía una nueva compania en el sistema.\n\n**Caso de uso:** En este caso, en el cuerpo de la solicitud se recibiría un JSON con los campos que se quiera y se guardaría una nueva compania"
+			},
+			"response": []
+		},
+		{
+			"name": "3.3 - Post sistema",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"PlayStation 5\",\n  \"lanzamiento\": \"2020-11-12\",\n  \"idcompania\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/EV04/public/sistema/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EV04",
+						"public",
+						"sistema",
+						"create"
+					]
+				},
+				"description": "Esta solicitud POST crearía una nueva compania en el videoconsola.\n\n**Caso de uso:** En este caso, en el cuerpo de la solicitud se recibiría un JSON con los campos que se quiera y se guardaría una nueva videoconsola"
+			},
+			"response": []
+		},
+		{
+			"name": "4.1 - Update juego por ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful PUT request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"titulo\": \"eercilla\",\n  \"idcompania\": 2,\n  \"sistema\": \"BirtLH\",\n  \"genero\": \"RPG\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/EV04/public/juego/update/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EV04",
+						"public",
+						"juego",
+						"update",
+						"8"
+					]
+				},
+				"description": "Esta solicitud PUT actualiza un juego existente en el sistema basándose en su ID.\n\n**Caso de uso:** Si se cambia el valor de `1` al ID del juego que quieres actualizar, editando las características en el cuerpo de la solicitud con los valores nuevos se anyadirían o modificarían el contenido de ese juego concreto"
+			},
+			"response": []
+		},
+		{
+			"name": "4.2 - Update compania por ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful PUT request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"eercilla\",\n  \"fundacion\": \"1987-04-07\",\n  \"pais\": \"EH\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/EV04/public/compania/update/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EV04",
+						"public",
+						"compania",
+						"update",
+						"10"
+					]
+				},
+				"description": "Esta solicitud PUT actualiza una compania existente en el sistema basándose en su ID.\n\n**Caso de uso:** Si se cambia el valor de `1` al ID de la compania que quieres actualizar, editando las características en el cuerpo de la solicitud con los valores nuevos se anyadirían o modificarían el contenido de esa compania concreta"
+			},
+			"response": []
+		},
+		{
+			"name": "4.3 - Update sistema por ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful PUT request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"eercilla\",\n  \"lanzamiento\": \"1987-04-07\",\n  \"idcompania\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/EV04/public/sistema/update/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EV04",
+						"public",
+						"sistema",
+						"update",
+						"8"
+					]
+				},
+				"description": "Esta solicitud PUT actualiza una videoconsolas existente en el sistema basándose en su ID.\n\n**Caso de uso:** Si se cambia el valor de `1` al ID de la videoconsola que quieres actualizar, editando las características en el cuerpo de la solicitud con los valores nuevos se anyadirían o modificarían el contenido de esa videoconsola concreta"
+			},
+			"response": []
+		},
+		{
+			"name": "5.1 - Delete juego por ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful DELETE request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/EV04/public/juego/delete/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EV04",
+						"public",
+						"juego",
+						"delete",
+						"8"
+					]
+				},
+				"description": "Esta solicitud DELETE elimina un juego específico del sistema por su ID.\n\n**Caso de uso:** Si se cambia el valor de `1` al ID del juego que quieres eliminar, este se eliminaría al recibir y procesar la solicitud"
+			},
+			"response": []
+		},
+		{
+			"name": "5.2 - Delete compania por ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful DELETE request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/EV04/public/compania/delete/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EV04",
+						"public",
+						"compania",
+						"delete",
+						"10"
+					]
+				},
+				"description": "Esta solicitud DELETE elimina una compania específica del sistema por su ID.\n\n**Caso de uso:** Si se cambia el valor de `1` al ID de la compania que quieres eliminar, esta se eliminaría al recibir y procesar la solicitud"
+			},
+			"response": []
+		},
+		{
+			"name": "5.2 - Delete CASCADE compania por ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful DELETE request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/EV04/public/compania/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EV04",
+						"public",
+						"compania",
+						"delete",
+						"1"
+					]
+				},
+				"description": "Esta solicitud DELETE elimina una compania específica del sistema por su ID.\n\n**Caso de uso:** Si se cambia el valor de `1` al ID de la compania que quieres eliminar, esta se eliminaría al recibir y procesar la solicitud"
+			},
+			"response": []
+		},
+		{
+			"name": "5.3 - Delete sistema por ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful DELETE request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/EV04/public/sistema/delete/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EV04",
+						"public",
+						"sistema",
+						"delete",
+						"8"
+					]
+				},
+				"description": "Esta solicitud DELETE elimina una videoconsolas especifica del sistema por su ID.\n\n**Caso de uso:** Si se cambia el valor de `1` al ID de la videoconsola que quieres eliminar, esta se eliminaría al recibir y procesar la solicitud"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "https://postman-rest-api-learner.glitch.me/"
+		}
+	]
+}
